@@ -13,6 +13,12 @@
   <img src="https://img.shields.io/badge/Made%20in-2026-purple?style=for-the-badge" alt="2026"/>
 </p>
 
+<p align="center">
+  <b>Developer:</b> #SWAG – Heaven Swag ·
+  <a href="https://t.me/he6ca">DM</a> ·
+  <a href="https://t.me/SWGHEV">Channel</a>
+</p>
+
 ---
 
 ## Overview
@@ -53,96 +59,11 @@ It supports **text posts**, **photo posts**, and **multi-post batch publishing**
 
 ```bash
 # Clone the repository
-git clone https://github.com/swagheav/VOID-POST.git
-cd VOID-POST
+git clone https://github.com/swagheav/VoidPost.git
+cd VoidPost
 
 # Install dependencies
 pip install flask requests
 
 # Run
 python voidpost.py
-```
-
-Then open **http://127.0.0.1:5000** in your browser.
-
----
-
-## Usage
-
-### 1. Get a Page access token
-
-You need a **Page access token** with these permissions:
-- `pages_manage_posts`
-- `pages_read_engagement`
-
-**Fast path (dev testing):**
-1. Go to [developers.facebook.com/tools/explorer](https://developers.facebook.com/tools/explorer)
-2. Select your app
-3. Click **Get Page Access Token** → grant permissions → select your Page
-4. Copy the token and paste it into VOID//POST
-
-**Long-lived path (production):**
-1. Use the **[ + ] Get a long-lived token** panel in the app
-2. Fill App ID, App Secret, and short-lived user token
-3. Click **Exchange** — the app swaps it for a 60-day token and fills it in
-
-### 2. Connect
-
-1. Go to the **Connect** tab
-2. Paste your **Page ID** and **token**
-3. Click **Test connection** — you should see your Page name appear
-4. Click **Save credentials** to persist locally
-
-### 3. Compose and publish
-
-1. Switch to **Compose**
-2. Type your post (add a photo if you want)
-3. Click **+** to add more posts (up to 10)
-4. Click **Publish** → confirm the modal → done
-
----
-
-## Project Structure
-
-```
-VOID-POST/
-├── voidpost.py        # Flask app + frontend
-├── requirements.txt   # flask, requests
-├── README.md
-└── LICENSE
-```
-
----
-
-## Technical Details
-
-| Property | Details |
-|----------|---------|
-| Language | Python 3.x |
-| Framework | Flask |
-| API | Facebook Graph API v21.0 |
-| Endpoints | `/feed`, `/photos`, `/oauth/access_token` |
-| Frontend | Single-file HTML/CSS/JS |
-| Storage | Local JSON config only |
-| Batch size | 10 posts max |
-
----
-
-## Notes
-
-- This tool is for **Pages you own or manage**. It will not work on personal profiles or Pages you don't have permission to post to.
-- All requests go to Facebook's official API — no scraping, no unofficial endpoints.
-- Keep your token private. Don't commit `~/.fb_poster_gui_config.json` to git.
-
----
-
-## Developer
-
-| Contact | Link |
-|---------|------|
-| Telegram | [@SWGHEV](https://t.me/SWGHEV) |
-| GitHub | [@swagheav](https://github.com/swagheav) |
-
----
-
-<p align="center">© 2026 VOID//POST • All Rights Reserved</p>
